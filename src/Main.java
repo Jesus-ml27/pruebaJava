@@ -12,7 +12,6 @@ public class Main {
             System.out.println("ingresa una numero: ");
          numero = sc.nextInt();
         }
-
         sc.close();
     }
 }
