@@ -1,0 +1,14 @@
+{
+  "name": "Taller Java",
+  "image": "mcr.microsoft.com/devcontainers/java:21",
+  "settings": {
+    "java.configuration.updateBuildConfiguration": "automatic"
+  },
+  "extensions": [
+    "vscjava.vscode-java-pack",
+    "vscjava.vscode-maven",
+    "redhat.java",
+    "mhutchie.git-graph"
+  ],
+  "postCreateCommand": "echo '✅ Entorno listo para el taller de Java'"
+}
