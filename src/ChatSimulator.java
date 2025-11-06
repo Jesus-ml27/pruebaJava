@@ -33,5 +33,8 @@ public class ChatSimulator {
 
         // Pide que el alumno agregue otro mensaje final de despedida
         System.out.println("\nGracias por probar VS Code, " + nombre + "!");
+         
+           
+    
     }
 }

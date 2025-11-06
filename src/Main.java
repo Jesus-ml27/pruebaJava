@@ -6,11 +6,13 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int numero = 0;
 
+
         System.out.println("¡Hola mundo desde GitHub Codespaces! 👋");
 
-        while (numero != 5) {
-            System.out.println("ingresa una numero: ");
-         numero = sc.nextInt();
+        // El programa terminará cuando se ingrese el número 3
+        while (numero != 3) {
+            System.out.println("Ingresa un número (escribe 3 para salir): ");
+            numero = sc.nextInt();
         }
         sc.close();
     }
