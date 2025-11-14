@@ -106,6 +106,9 @@ public class ConversorMonedas {
                     op = cantidad * tasasCambioUSD.get(opcOrigen - 1);
                     resultado = op / tasasCambioUSD.get(opcDestino - 1);
 
+                    
+
+
                     System.out.printf("%.2f en %s a %s son: %.2f ", cantidad, (nombresMonedas.get(opcOrigen - 1)), (nombresMonedas.get(opcDestino - 1)), resultado);
 
                     do {
@@ -133,6 +136,9 @@ public class ConversorMonedas {
             }
 
         } while (continuar);
+
+        sc.close();
+        
     }
 }
 

@@ -1,21 +1,20 @@
-// Ejercicio en clase version dos (el que utiliza dos arrays)
-
 import java.util.Scanner;
+
 public class EmpleadosV2 {
     public static void main(String[] args) {
         int numeroEmpleados = 3;
         Scanner sc = new Scanner(System.in);
-        String[] nombres = new String[numeroEmpleados]; // Array para almacenar los nombres
-        int[] horas = new int[numeroEmpleados]; // Array para almacenar las horas trabajadas
-        double promedio = 0; // Variable para el promedio de horas trabajadas
-        double suma = 0; // Variable para la suma de horas trabajadas
-        int c=0; // Contador de empleados que superan el promedio
-        int i; // Variable de control para los bucles
+        String[] nombres = new String[numeroEmpleados]; 
+        int[] horas = new int[numeroEmpleados]; 
+        double promedio = 0; 
+        double suma = 0; 
+        int c=0; 
+        int i; 
 
 
-        System.out.println("Longitud de la array: "+ numeroEmpleados ); 
+        System.out.println("Tamaño de el arreglo : "+ numeroEmpleados ); 
 
-		for( i=0;i < numeroEmpleados ; i++ ) { // Bucle para ingresar los datos de cada empleado    
+		for( i=0;i < numeroEmpleados ; i++ ) {     
 			System.out.println("Introduce el nombre del empleado:");
 			nombres[i]=sc.nextLine();
 			System.out.println("Introduce las horas trabajadas:");
@@ -25,14 +24,14 @@ public class EmpleadosV2 {
          
         sc.close();
 
-        for(i=0;i<numeroEmpleados;i++) { // Bucle para calcular la suma de horas trabajadas
+        for(i=0;i<numeroEmpleados;i++) { 
             suma=suma+horas[i];
         }
          promedio=suma/numeroEmpleados;
 
          promedio=suma/numeroEmpleados;
 
-		for(i=0;i<numeroEmpleados;i++) { // Bucle para mostrar los datos de cada empleado
+		for(i=0;i<numeroEmpleados;i++) { 
 			
 			System.out.println("Empleado "+(i+1)+": "+nombres[i]+" Horas trabajadas: "+horas[i]+" Se le pagara: "+(horas[i]*50)+" Pesos");
             if(horas[i]>promedio){
