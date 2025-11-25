@@ -13,6 +13,7 @@ public class Ejercicio3
        int [] dinero = {1000,500,200,100,50,20,10,5,2,1};
         System.out.println("ingrese una cantidad de dinero: ");
         int cantidad=sc.nextInt();
+        sc.close();
         System.out.println("el desglose de $"+cantidad+" es: ");
 
         for(int i=0;i<dinero.length;i++)
