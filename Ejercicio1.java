@@ -1,5 +1,6 @@
 // Maerinez Lopez Jesus
-// El programa presenta un error de ejecucion al intentar acceder a una posicion que no existe en el arreglo.
+/*  El programa presenta una exepción  de ejecucion al intentar acceder a una posicion que no existe en el arreglo.
+  (java.lang.ArrayIndexOutOfBoundsException)*/
 
 
 public class Ejercicio1 {
