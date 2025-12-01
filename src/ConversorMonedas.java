@@ -143,7 +143,7 @@ public class ConversorMonedas { /* Se crea una clase para el programa*/
                 
                     
                 }
-            }
+            } 
 
         } while (continuar); // el ciclo termina cuando continuar se vuelva falso 
         sc.close();
