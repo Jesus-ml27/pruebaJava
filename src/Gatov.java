@@ -23,6 +23,7 @@ public class Gatov {
 
         String eleccion = "";
         char jugadorActual; 
+        int c=0; // contador para las combinaciones ganadoras
 
         do { // Ciclo para validar que los jugadores elijan entre X o 0
             System.out.println("Jugador 1 elige: X o 0");
@@ -91,28 +92,56 @@ public class Gatov {
                 
 
             } while (!casillaValida);
+
             
            
             tablero[fila - 1][col - 1] = jugadorActual;
             movimientos++; 
 
-            // Aqui están las 8 posibles combinaciones para ganar
+            while (hat) {
+                
+            }
             
-            if(tablero[0][0] == jugadorActual && tablero[0][1] == jugadorActual && tablero[0][2] == jugadorActual) hayGanador = true;
-            
-            if(tablero[1][0] == jugadorActual && tablero[1][1] == jugadorActual && tablero[1][2] == jugadorActual) hayGanador = true;
+            for (int i= 0; i<3; i++) {
+                c=0;
+                for (int j=0; j<3; j++) {
+                    if (tablero[i][j] == jugadorActual) {
+                        c++;
+                    }
+                    
+                }
+                if (c==3) {
+                    hayGanador=true;
+                }
+            }
 
-            if(tablero[2][0] == jugadorActual && tablero[2][1] == jugadorActual && tablero[2][2] == jugadorActual) hayGanador = true;
-            
-            if(tablero[0][0] == jugadorActual && tablero[1][0] == jugadorActual && tablero[2][0] == jugadorActual) hayGanador = true;
+            for (int j= 0; j<3; j++) {
+                c=0;
+                for (int i=0; i<3; i++) {
+                    if (tablero[i][j] == jugadorActual) {
+                        c++;
+                    }
+                    
+                }
+                if (c==3) {
+                    hayGanador=true;
+                }
+            }
 
-            if(tablero[0][1] == jugadorActual && tablero[1][1] == jugadorActual && tablero[2][1] == jugadorActual) hayGanador = true;
-            
-            if(tablero[0][2] == jugadorActual && tablero[1][2] == jugadorActual && tablero[2][2] == jugadorActual) hayGanador = true;
-            
-            if(tablero[0][0] == jugadorActual && tablero[1][1] == jugadorActual && tablero[2][2] == jugadorActual) hayGanador = true;
+            for (int i=3-1; i>=0; i--) {
+                c=0;
+                for (int j=0; j<3; j++) {
+                    if (tablero[i][j] == jugadorActual) {
+                        c++;
+                    }
+                    i--;
+                }
+                if (c==3) {
+                hayGanador=true;
+                }
+            }
 
-            if(tablero[0][2] == jugadorActual && tablero[1][1] == jugadorActual && tablero[2][0] == jugadorActual) hayGanador = true;
+            
 
             if (hayGanador) { // condiicon que determina si hay un ganador 
                 System.out.println("\n FELICIDADES JUGADOR " + jugadorActual + ", HAS GANADO !");
@@ -134,5 +163,6 @@ public class Gatov {
                 }
             }
         }
+
     }
 }
