@@ -40,7 +40,7 @@ public class Gatov {
             jugadorActual = '0'; 
         }
 
-        boolean hayGanador = false; // Variable booleana para controlar el ciclo del juego
+        boolean hayGanador = fazlse; // Variable booleana para controlar el ciclo del juego
         int movimientos = 0;  // contador de movimientos del juego
 
         System.out.println("    COMIENZA EL JUEGO    ");
