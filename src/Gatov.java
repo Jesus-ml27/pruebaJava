@@ -98,51 +98,63 @@ public class Gatov {
             tablero[fila - 1][col - 1] = jugadorActual;
             movimientos++; 
 
-            while (hat) {
-                
+
+            int contador; 
+            
+            for (int i = 0; i < 3; i++) {
+                contador = 0; 
+                for (int j = 0; j < 3; j++) {
+                    
+                    if (tablero[i][j] == jugadorActual) {
+                        contador++;
+                    }
+                }
+                // Si al terminar la fila contamos 3, es ganador
+                if (contador == 3) {
+                    hayGanador = true;
+                }
+            }
+
+            // 2. VERIFICAR LAS 3 COLUMNAS
+            // Recorremos cada columna una por una (nota que j es el ciclo externo ahora)
+            for (int j = 0; j < 3; j++) {
+                contador = 0; // Reiniciamos el contador en cada nueva columna
+                for (int i = 0; i < 3; i++) {
+                    if (tablero[i][j] == jugadorActual) {
+                        contador++;
+                    }
+                }
+                if (contador == 3) {
+                    hayGanador = true;
+                }
+            }
+
+            // 3. VERIFICAR DIAGONAL PRINCIPAL (1,1 -> 2,2 -> 3,3)
+            // Solo necesitamos un ciclo porque fila y columna son iguales (0,0), (1,1), (2,2)
+            contador = 0;
+            for (int i = 0; i < 3; i++) {
+                if (tablero[i][i] == jugadorActual) {
+                    contador++;
+                }
+            }
+            if (contador == 3) {
+                hayGanador = true;
+            }
+
+            // 4. VERIFICAR DIAGONAL INVERTIDA (1,3 -> 2,2 -> 3,1)
+            // Fila aumenta (i), Columna disminuye (2 - i)
+            contador = 0;
+            for (int i = 0; i < 3; i++) {
+                if (tablero[i][2 - i] == jugadorActual) {
+                    contador++;
+                }
+            }
+            if (contador == 3) {
+                hayGanador = true;
             }
             
-            for (int i= 0; i<3; i++) {
-                c=0;
-                for (int j=0; j<3; j++) {
-                    if (tablero[i][j] == jugadorActual) {
-                        c++;
-                    }
-                    
-                }
-                if (c==3) {
-                    hayGanador=true;
-                }
-            }
-
-            for (int j= 0; j<3; j++) {
-                c=0;
-                for (int i=0; i<3; i++) {
-                    if (tablero[i][j] == jugadorActual) {
-                        c++;
-                    }
-                    
-                }
-                if (c==3) {
-                    hayGanador=true;
-                }
-            }
-
-            for (int i=3-1; i>=0; i--) {
-                c=0;
-                for (int j=0; j<3; j++) {
-                    if (tablero[i][j] == jugadorActual) {
-                        c++;
-                    }
-                    i--;
-                }
-                if (c==3) {
-                hayGanador=true;
-                }
-            }
-
             
-
+            
             if (hayGanador) { // condiicon que determina si hay un ganador 
                 System.out.println("\n FELICIDADES JUGADOR " + jugadorActual + ", HAS GANADO !");
                 System.out.println("-------------");
