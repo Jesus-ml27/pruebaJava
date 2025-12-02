@@ -101,7 +101,7 @@ public class Gatov {
 
             int contador; 
             
-            for (int i = 0; i < 3; i++) {
+            for (int i = 0; i < 3; i++) { // Ciclo para determinar si hay un ganador en las filas
                 contador = 0; 
                 for (int j = 0; j < 3; j++) {
                     
@@ -109,16 +109,15 @@ public class Gatov {
                         contador++;
                     }
                 }
-                // Si al terminar la fila contamos 3, es ganador
+                
                 if (contador == 3) {
                     hayGanador = true;
                 }
             }
 
-            // 2. VERIFICAR LAS 3 COLUMNAS
-            // Recorremos cada columna una por una (nota que j es el ciclo externo ahora)
-            for (int j = 0; j < 3; j++) {
-                contador = 0; // Reiniciamos el contador en cada nueva columna
+            
+            for (int j = 0; j < 3; j++) { // Ciclo para determinar si hay un ganador en las columnas
+                contador = 0; 
                 for (int i = 0; i < 3; i++) {
                     if (tablero[i][j] == jugadorActual) {
                         contador++;
@@ -129,10 +128,9 @@ public class Gatov {
                 }
             }
 
-            // 3. VERIFICAR DIAGONAL PRINCIPAL (1,1 -> 2,2 -> 3,3)
-            // Solo necesitamos un ciclo porque fila y columna son iguales (0,0), (1,1), (2,2)
+            
             contador = 0;
-            for (int i = 0; i < 3; i++) {
+            for (int i = 0; i < 3; i++) { // Ciclo para determinar si hay un ganador en las diagonales
                 if (tablero[i][i] == jugadorActual) {
                     contador++;
                 }
@@ -141,10 +139,9 @@ public class Gatov {
                 hayGanador = true;
             }
 
-            // 4. VERIFICAR DIAGONAL INVERTIDA (1,3 -> 2,2 -> 3,1)
-            // Fila aumenta (i), Columna disminuye (2 - i)
+            
             contador = 0;
-            for (int i = 0; i < 3; i++) {
+            for (int i = 0; i < 3; i++) { // Ciclo para determinar si hay un ganador en las diagonales invertidas
                 if (tablero[i][2 - i] == jugadorActual) {
                     contador++;
                 }
