@@ -1,6 +1,5 @@
-// Maerinez Lopez Jesus
-/*  El programa presenta una exepción  de ejecucion al intentar acceder a una posicion que no existe en el arreglo.
-  (java.lang.ArrayIndexOutOfBoundsException)*/
+/*Maerinez Lopez Jesus
+  Escribe un programa que intente acceder en un arreglo un elemento que no existe (fuera del rango). ¿Qué sucede en la ejecución?*/
 
 
 public class Ejercicio1 {

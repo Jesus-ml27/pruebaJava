@@ -1,6 +1,8 @@
-// Martinez Lopez Jesus
-/*  El programa calcula el desglose de cierta cantidad de dinero a partir de 
-valores de los billetes que estan almacenados en un arreglo.*/
+/*  Martinez Lopez Jesus
+ Escribe un programa que almacene en un arreglo la denominacion de billetes
+y monedas (1000, 500, 200, 100, 50, 20, 10, 5, 2, 1) lee de teclado una 
+cantidad y procesa número de billetes y monedas de cada denominacion 
+para tal cantidad*/
 
 import java.util.Scanner;
 
